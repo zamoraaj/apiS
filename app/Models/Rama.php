@@ -9,7 +9,7 @@ class Rama extends Model
 {
     use HasFactory;
 
-    protected $table = 'rama';
+    // protected $table = 'rama';
     
     protected $fillable = [
         "palabra",

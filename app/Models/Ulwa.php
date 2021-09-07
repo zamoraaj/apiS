@@ -9,7 +9,7 @@ class Ulwa extends Model
 {
     use HasFactory;
 
-    protected $table = 'ulwa';
+    // protected $table = 'ulwa';
     
     protected $fillable = [
         "palabra",

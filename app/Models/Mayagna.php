@@ -9,7 +9,7 @@ class Mayagna extends Model
 {
     use HasFactory;
 
-    protected $table = 'mayagna';
+    // protected $table = 'mayagna';
     
     protected $fillable = [
         "palabra",

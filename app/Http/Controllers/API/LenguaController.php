@@ -1,12 +1,12 @@
 <?php
 
 namespace App\Http\Controllers\API;
-
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Garifuna;
+use App\Models\Lengua;
 
-class GarifunaController extends Controller
+
+class LenguaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,17 @@ class GarifunaController extends Controller
      */
     public function index()
     {
-        return Garifuna::all();
+        return Lengua::all();
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        //
     }
 
     /**
@@ -26,11 +36,7 @@ class GarifunaController extends Controller
      */
     public function store(Request $request)
     {
-        $garifuna= new Garifuna();
-        $garifuna->palabra = $request->palabra;
-        $garifuna->descripcion= $request->descripcion;
-
-        $garifuna->save();
+        //
     }
 
     /**
@@ -45,6 +51,17 @@ class GarifunaController extends Controller
     }
 
     /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        //
+    }
+
+    /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -53,12 +70,7 @@ class GarifunaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $garifuna = Garifuna::findOrFail($request->id);
-        $garifuna->palabra = $request->palabra;
-        $garifuna->descripcion = $request->descripcion;
-
-        $garifuna->save();
-        return $garifuna;
+        //
     }
 
     /**
@@ -67,9 +79,8 @@ class GarifunaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request)
+    public function destroy($id)
     {
-        $garifuna= Garifuna::destroy($request->id);
-        return $garifuna;
+        //
     }
 }

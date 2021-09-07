@@ -5,12 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Miskito extends Model
+class Lengua extends Model
 {
     use HasFactory;
 
-
-    // protected $table = 'miskito';
+    // protected $table = 'lengua';
     
     protected $fillable = [
         "palabra",

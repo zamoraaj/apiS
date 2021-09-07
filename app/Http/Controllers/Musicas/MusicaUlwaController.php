@@ -1,12 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\API;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
+use App\Models\MusicaUlwa;
 use Illuminate\Http\Request;
-use App\Models\LenguaEtnica;
 
-class LenguasEtnicasController extends Controller
+class MusicaUlwaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +14,17 @@ class LenguasEtnicasController extends Controller
      */
     public function index()
     {
-        return LenguaEtnica::all();
+        //
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        //
     }
 
     /**
@@ -32,10 +41,21 @@ class LenguasEtnicasController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\MusicaUlwa  $musicaUlwa
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(MusicaUlwa $musicaUlwa)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Models\MusicaUlwa  $musicaUlwa
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(MusicaUlwa $musicaUlwa)
     {
         //
     }
@@ -44,10 +64,10 @@ class LenguasEtnicasController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Models\MusicaUlwa  $musicaUlwa
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, MusicaUlwa $musicaUlwa)
     {
         //
     }
@@ -55,10 +75,10 @@ class LenguasEtnicasController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\MusicaUlwa  $musicaUlwa
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(MusicaUlwa $musicaUlwa)
     {
         //
     }

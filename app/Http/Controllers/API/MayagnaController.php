@@ -26,7 +26,11 @@ class MayagnaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $mayagna= new Mayagna();
+        $mayagna->palabra = $request->palabra;
+        $mayagna->descripcion= $request->descripcion;
+        
+        $mayagna->save();
     }
 
     /**
@@ -49,7 +53,12 @@ class MayagnaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $mayagna = Mayagna::finOrFail($request->id);
+        $mayagna->palabra = $request->palabra;
+        $mayagna->descripcion = $request->descripcion;
+        
+        $mayagna->save();
+        return $mayagna;
     }
 
     /**
@@ -58,8 +67,9 @@ class MayagnaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        //
+        $mayagna = Mayagna::destroy($request->id);
+        return $mayagna;
     }
 }

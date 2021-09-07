@@ -9,7 +9,7 @@ class Garifuna extends Model
 {
     use HasFactory;
 
-    protected $table = 'garifuna';
+    // protected $table = 'garifuna';
     
     protected $fillable = [
         "palabra",
