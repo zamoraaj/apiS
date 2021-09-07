@@ -15,8 +15,12 @@ class CreateLenguasTable extends Migration
     {
         Schema::create('lenguas', function (Blueprint $table) {
             $table->id();
-            $table->string('palabra',60);
-            $table->string('descripcion',80);
+            $table ->foreignId('garifuna_id')->constrained('garifunas');
+            $table ->foreignId('mayagna_id')->constrained('mayagnas');
+            $table ->foreignId('miskito_id')->constrained('miskitos');
+            $table ->foreignId('rama_id')->constrained('ramas');
+            $table ->foreignId('ulwa_id')->constrained('ulwas');
+            $table ->foreignId('mestizo_id')->constrained('mestizos');
             $table->timestamps();
         });
     }

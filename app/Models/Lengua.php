@@ -12,7 +12,14 @@ class Lengua extends Model
     // protected $table = 'lengua';
     
     protected $fillable = [
-        "palabra",
-        "descripcion",
+         
+            "garifuna_id",
+            "mayagna_id",
+            "miskito_id",
+            "rama_id",
+            "ulwa_id",
+            "mestizo_id"
     ];
 }
+
+
